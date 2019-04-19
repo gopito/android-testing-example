@@ -30,7 +30,7 @@ public class FixturesExampleWithRule {
     //Выведем имя тестового метода и создадим класс калькулятор
     @Before
     public void setUp() {
-        System.out.println(String.format("Test name %s started", name.getMethodName()));
+        System.out.println(String.format("Before Test name %s started", name.getMethodName()));
         calculator = Calculator.getInstance();
     }
 
@@ -50,13 +50,14 @@ public class FixturesExampleWithRule {
     //Фикстура будет выполнена после каждого теста
     @After
     public void tearDown() {
-        System.out.println(String.format("Test name %s finished", name.getMethodName()));
+        System.out.println(String.format("After Test name %s finished", name.getMethodName()));
     }
 
     //Фикстура будет выполнена один раз после всех тестов
     @AfterClass
     public static void tearDownClass() {
-        System.out.println("BeforeClass FixturesExampleWithRule finished");
+        System.out.println("AfterClass FixturesExampleWithRule finished");
     }
 
 }
+

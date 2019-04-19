@@ -11,3 +11,6 @@
 /build
 /captures
 .externalNativeBuild
+libs/
+src/androidTest/assets-androidTest/
+src/test/resources/

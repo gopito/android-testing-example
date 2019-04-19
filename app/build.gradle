@@ -12,7 +12,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//        testInstrumentationRunnerArguments clearPackageData: 'true'
+        // Раскомментировать для оркестратора.  Чтобы очищал приложузу после теста.
+        testInstrumentationRunnerArguments clearPackageData: 'true'
     }
 
 
@@ -43,7 +44,8 @@ android {
 
     testOptions {
         //Тут в примере от гугла ошибка
-//        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        // Раскомментировать для оркестратора.
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
 
 //        reportDir "$rootDir/test-reports"
         // Encapsulates options for local unit tests.
@@ -95,10 +97,9 @@ dependencies {
     testImplementation 'org.powermock:powermock-module-junit4:1.7.3'
     testImplementation 'org.powermock:powermock-api-mockito2:1.7.3'
 
-    testImplementation 'org.robolectric:robolectric:4.2.1'
     //for Robolectric
     testImplementation 'androidx.test:core:1.1.0'
-
+    testImplementation 'org.robolectric:robolectric:4.2.1'
     testImplementation 'androidx.test:runner:1.1.1'
     testImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     testImplementation "androidx.test:rules:1.1.1"
@@ -113,7 +114,8 @@ dependencies {
     //For DatePicker
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
 
-//    androidTestUtil 'androidx.test:orchestrator:1.1.1'
+    // Раскомментировать для оркестратора
+    //androidTestUtil 'androidx.test:orchestrator:1.1.1'
 }
 
 

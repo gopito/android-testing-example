@@ -1,7 +1,5 @@
 package ru.android2019.testingexample;
 
-import androidx.core.util.Preconditions;
-
 public class Calculator {
     private Integer result;
     private Integer firstDigit;
@@ -30,7 +28,7 @@ public class Calculator {
         return this;
     }
 
-    public Calculator subtract(Integer first, Integer second) {
+    protected Calculator subtract(Integer first, Integer second) {
         error = "";
         firstDigit = first;
         secondDigit = second;

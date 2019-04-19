@@ -12,6 +12,8 @@ import org.junit.runner.RunWith;
 import androidx.test.espresso.contrib.PickerActions;
 import androidx.test.espresso.matcher.BoundedMatcher;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.filters.SmallTest;
 import androidx.test.rule.ActivityTestRule;
 import ru.android2019.testingexample.emailValidator.SettingsActivity;
 
@@ -27,10 +29,11 @@ public class DatePickerTest {
     public ActivityTestRule<SettingsActivity> rule = new ActivityTestRule<>(SettingsActivity.class);
 
     @Test
+    @LargeTest
     public void changeDatePickerTest() {
         closeSoftKeyboard();
-        onView(withId(R.id.dateOfBirthInput)).perform(PickerActions.setDate(2017, 2, 5));
-        onView(withId(R.id.dateOfBirthInput)).check(matches(matchesDate(2017, 3, 5)));
+        onView(withId(R.id.dateOfBirthInput)).perform(PickerActions.setDate(2017, 12, 5));
+        onView(withId(R.id.dateOfBirthInput)).check(matches(matchesDate(2017, 12, 5)));
 
     }
 
@@ -44,7 +47,7 @@ public class DatePickerTest {
 
             @Override
             protected boolean matchesSafely(DatePicker item) {
-                return (year == item.getYear() && month == item.getMonth() + 1 && day == item.getDayOfMonth());
+                return (year == item.getYear() && month == item.getMonth() + 1  && day == item.getDayOfMonth());
             }
         };
     }

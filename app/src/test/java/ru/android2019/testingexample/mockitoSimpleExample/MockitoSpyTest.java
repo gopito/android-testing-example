@@ -25,6 +25,8 @@ public class MockitoSpyTest {
 
     @Test
     public void spyAnnotation() {
+//        List<String> list = (List<String>)Mockito.mock(List.class;
+
         //Добавляем сторочки в лист. Он должен вести себя также как обычный ArrayList.
         spiedList.add("one");
         spiedList.add("one");

@@ -79,7 +79,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Fill input fields from data retrieved from the SharedPreferences.
         populateUi();
-        throw new RuntimeException("lol");
+//        throw new RuntimeException("lol");
     }
 
     /**
